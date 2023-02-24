@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div class="user signinBx">
+          <div class="imgBx">
+            <img src="asset\book.jpg" height="400px" width="400px" />
+          </div>
+          <div class="formBx">
+            <form>
+              <h2>Masuk</h2>
+              <input type="text" placeholder="Username" />
+              <input type="password" placeholder="Password" />
+              <input type="submit" value="Login" />
+              <p class="signup">
+                Tidak Punya Akun? <a href="#" onclick="toggleForm();">Daftar</a>
+              </p>
+            </form>
+          </div>
+        </div>
+
+        <div class="user signupBx">
+          <div class="formBx">
+            <form>
+              <h2>Buat Akun</h2>
+              <input type="text" placeholder="Username" />
+              <input type="text" placeholder="Email Address" />
+              <input type="password" placeholder="Create Password" />
+              <input type="password" placeholder="Confirm Password" />
+              <input type="submit" value="Daftar" />
+              <p class="signup">
+                Sudah Punya Akun? <a href="#" onclick="toggleForm();">Masuk</a>
+              </p>
+            </form>
+          </div>
+          <div class="imgBx">
+            <img src="asset\book2.png" height="400px" width="400px" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      function toggleForm() {
+        section = document.querySelector("section");
+        container = document.querySelector(".container");
+        container.classList.toggle("active");
+        section.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
